@@ -39,7 +39,9 @@ public class CreateUser {
 		
 		System.out.println("Generated id is:"+id);
 		
-		context.setAttribute("user_id", id);	
+		//context.setAttribute("user_id", id);	//attribute available at test level
+		
+		context.getSuite().setAttribute("user_id", id);   //attribute available at suite level
 		
 	}
 

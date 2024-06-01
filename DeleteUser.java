@@ -16,7 +16,9 @@ public class DeleteUser {
 		
 		String bearerToken = "7299ba720b99078b4e059ed561855f4e5e2e86ef7ac56777dd675b3d9200f1dd";
 		
-		int id = (Integer) context.getAttribute("user_id"); 
+		//int id = (Integer) context.getAttribute("user_id"); 
+		
+		int id = (Integer) context.getSuite().getAttribute("user_id");
 		
 		given()
 		.headers("Authorization", "Bearer "+bearerToken)
