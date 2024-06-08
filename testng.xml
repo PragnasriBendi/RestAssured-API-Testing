@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="PetSuite">
+	
+	<listeners>
+		<listener class-name="api.utilities.ExtentReportManager">
+			
+		</listener>
+		
+	</listeners>
+  <test thread-count="5" name="PetTest">
     <classes>
-      <class name="l23.CreateUser"/>
-      <class name="l23.GetUser"/>
-      <class name="l23.UpdateUser"/>
-      <class name="l23.DeleteUser"/>
+      <!--<class name="api.test.DataDrivenTests"/>-->
+      <class name="api.test.UserTests"/>
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> <!-- PetTest -->
+</suite> <!-- PetSuite -->
